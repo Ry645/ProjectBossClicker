@@ -19,7 +19,7 @@ func takeDamage(damage):
 		return
 	
 	health -= damage
-	#print("health: ", health)
+	print("health: ", health)
 	emit_signal("healthUpdate", minHealth, maxHealth, health)
 	if health <= minHealth:
 		emit_signal("die")

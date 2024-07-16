@@ -16,7 +16,7 @@ signal addToMagicExtract(mana)
 func _ready():
 	emit_signal("manaUpdate", minMana, maxMana, mana)
 	
-	#TEST
+	#TEST might start once boss starts and end once boss ends
 	startRegenTimer()
 
 func useMana(manaUsed) -> bool:

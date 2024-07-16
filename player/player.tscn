@@ -1,12 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfwrgi6d4f41k"]
+[gd_scene load_steps=7 format=3 uid="uid://bfwrgi6d4f41k"]
 
+[ext_resource type="Texture2D" uid="uid://dxs5ai5uyqojq" path="res://player/goldenCrosshair.png" id="1_0dv0r"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_54656"]
 [ext_resource type="PackedScene" uid="uid://1l5roa5kttpy" path="res://healthSystem/health_system.tscn" id="2_tn38k"]
 [ext_resource type="PackedScene" uid="uid://dyctee8luukxh" path="res://manaSystem/mana_system.tscn" id="3_wnsfv"]
+[ext_resource type="Script" path="res://player/playerCollision.gd" id="5_lvosi"]
 
-[node name="player" type="Node"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r6fg"]
+
+[node name="player" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0dv0r")
 script = ExtResource("1_54656")
 
 [node name="healthSystem" parent="." instance=ExtResource("2_tn38k")]
 
 [node name="manaSystem" parent="." instance=ExtResource("3_wnsfv")]
+
+[node name="playerCollision" type="Area2D" parent="."]
+script = ExtResource("5_lvosi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerCollision"]
+shape = SubResource("RectangleShape2D_2r6fg")
+
+[connection signal="sendDamage" from="playerCollision" to="." method="_on_player_collision_send_damage"]

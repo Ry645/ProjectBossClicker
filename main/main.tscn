@@ -1,11 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://c400ejvok55y"]
+[gd_scene load_steps=5 format=3 uid="uid://c400ejvok55y"]
 
 [ext_resource type="PackedScene" uid="uid://bryv3ijojnogm" path="res://bossSprite/boss_sprite.tscn" id="1_mg7t7"]
+[ext_resource type="Script" path="res://main/main.gd" id="1_y4r1f"]
 [ext_resource type="PackedScene" uid="uid://bfwrgi6d4f41k" path="res://player/player.tscn" id="2_5tf7f"]
+[ext_resource type="PackedScene" uid="uid://ckh83ptu731mq" path="res://hitBox/hit_box.tscn" id="4_paho8"]
 
 [node name="main" type="Node2D"]
+script = ExtResource("1_y4r1f")
 
 [node name="bossSprite" parent="." instance=ExtResource("1_mg7t7")]
 position = Vector2(558, 324)
+scale = Vector2(0.5, 0.5)
 
 [node name="player" parent="." instance=ExtResource("2_5tf7f")]
+
+[node name="hitBox" parent="." instance=ExtResource("4_paho8")]
+position = Vector2(36, 324)
+scale = Vector2(25.625, 25.625)

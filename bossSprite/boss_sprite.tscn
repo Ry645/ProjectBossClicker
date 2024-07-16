@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bryv3ijojnogm"]
+
+[ext_resource type="Texture2D" uid="uid://bvy3alf67pd2n" path="res://bossSprite/bossPlaceholder.png" id="1_nvalg"]
+
+[node name="bossSprite" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_nvalg")

@@ -1,0 +1,22 @@
+vampire slayer/rift mechanics from hypixel skyblock
+
+buncha small boss attacks that combine together
+based purely on mouse cursor position
+
+need to hold down button for 3 seconds to start boss
+
+boss tiers
+    later tiers are essentially stat checks that soft-require new gear
+
+player heals to full health with right click ability and uses 40 mana
+
+
+materials gained from defeating boss
+better materials from having more magic extract
+excess mana regened goes towards magic extract
+magic extract deactivated on first boss attempt for its tier
+
+different bosses in different dimensions with entirely different mechanics and gear
+can transfer some gear across dimensions for a progression system
+
+not supposed to complete highest tier of bosses in early game, instead complete lower tiers and go to next dimension for next boss after tier III

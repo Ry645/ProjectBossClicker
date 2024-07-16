@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyctee8luukxh"]
+
+[ext_resource type="Script" path="res://manaSystem/mana_system.gd" id="1_qkswl"]
+
+[node name="manaSystem" type="Node"]
+script = ExtResource("1_qkswl")
+
+[node name="regenTimer" type="Timer" parent="."]
+process_callback = 0
+
+[connection signal="timeout" from="regenTimer" to="." method="_on_regen_timer_timeout"]

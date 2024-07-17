@@ -11,5 +11,6 @@ script = ExtResource("2_hjjhg")
 swordSlashSets = Array[PackedScene]([ExtResource("3_senlo"), ExtResource("4_ihl84")])
 
 [node name="attackTimer" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]

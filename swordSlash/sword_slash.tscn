@@ -3,9 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ckh83ptu731mq" path="res://hitBox/hit_box.tscn" id="1_dav8b"]
 [ext_resource type="Texture2D" uid="uid://bj3si2whuc3kj" path="res://swordSlash/swordSlashEffect.png" id="1_eci64"]
 [ext_resource type="Script" path="res://swordSlash/sword_slash.gd" id="1_rbgly"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tx78g"]
-size = Vector2(550, 50)
+[ext_resource type="Shape2D" uid="uid://diwjtfgvykugl" path="res://swordSlash/swordSlashCollision.tres" id="3_5v0jm"]
 
 [node name="swordSlash" type="Sprite2D"]
 script = ExtResource("1_rbgly")
@@ -13,7 +11,8 @@ script = ExtResource("1_rbgly")
 [node name="hitBox" parent="." instance=ExtResource("1_dav8b")]
 
 [node name="CollisionShape2D" parent="hitBox" index="0"]
-shape = SubResource("RectangleShape2D_tx78g")
+shape = ExtResource("3_5v0jm")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="texture" type="Sprite2D" parent="."]
 position = Vector2(0, -20.69)

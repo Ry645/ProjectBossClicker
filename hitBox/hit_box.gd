@@ -2,7 +2,7 @@ extends Area2D
 
 class_name HitBox
 
-@onready var timer = $Timer
+@onready var timer = $durationTimer
 
 @export var hitBoxType:String = "swordSlash"
 var hitBoxProperties:HitBoxProperties = HitBoxProperties.new(hitBoxType)
@@ -31,7 +31,3 @@ func _on_area_entered(area:Area2D):
 					area.takeDamage(hitBoxProperties.damageValue)
 					
 	
-
-
-func _on_timer_timeout():
-	queue_free()

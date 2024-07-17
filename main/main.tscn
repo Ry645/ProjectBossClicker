@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bryv3ijojnogm" path="res://bossSprite/boss_sprite.tscn" id="1_mg7t7"]
 [ext_resource type="Script" path="res://main/main.gd" id="1_y4r1f"]
 [ext_resource type="PackedScene" uid="uid://bfwrgi6d4f41k" path="res://player/player.tscn" id="2_5tf7f"]
-[ext_resource type="PackedScene" uid="uid://ckh83ptu731mq" path="res://hitBox/hit_box.tscn" id="4_paho8"]
+[ext_resource type="PackedScene" uid="uid://dpetu3bedhbhk" path="res://swordSlash/sword_slash.tscn" id="4_knnq7"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_y4r1f")
@@ -14,6 +14,8 @@ scale = Vector2(0.5, 0.5)
 
 [node name="player" parent="." instance=ExtResource("2_5tf7f")]
 
-[node name="hitBox" parent="." instance=ExtResource("4_paho8")]
-position = Vector2(36, 324)
-scale = Vector2(25.625, 25.625)
+[node name="swordSlash" parent="." instance=ExtResource("4_knnq7")]
+position = Vector2(126, 325)
+rotation = -1.5708
+
+[connection signal="spawnAttack" from="bossSprite" to="." method="_on_boss_sprite_spawn_attack"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbb6imkgnnpn0"]
+
+[ext_resource type="PackedScene" uid="uid://dpetu3bedhbhk" path="res://swordSlash/sword_slash.tscn" id="1_73mbj"]
+
+[node name="swordSlashSet1" type="Node2D"]
+
+[node name="swordSlash" parent="." instance=ExtResource("1_73mbj")]
+position = Vector2(556, 316)
+rotation = -1.5708
+
+[node name="swordSlash2" parent="." instance=ExtResource("1_73mbj")]
+position = Vector2(981, 320)
+rotation = -1.5708
+
+[node name="swordSlash3" parent="." instance=ExtResource("1_73mbj")]
+position = Vector2(121, 320)
+rotation = -1.5708

@@ -9,3 +9,7 @@ func _ready():
 func _input(event):
 	if event is InputEventMouseMotion:
 		$player.position = event.position
+
+
+func _on_boss_sprite_spawn_attack(node):
+	add_child(node)

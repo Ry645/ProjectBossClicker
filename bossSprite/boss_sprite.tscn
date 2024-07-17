@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bryv3ijojnogm"]
+[gd_scene load_steps=5 format=3 uid="uid://bryv3ijojnogm"]
 
 [ext_resource type="Texture2D" uid="uid://bvy3alf67pd2n" path="res://bossSprite/bossPlaceholder.png" id="1_nvalg"]
+[ext_resource type="Script" path="res://bossSprite/boss_sprite.gd" id="2_hjjhg"]
+[ext_resource type="PackedScene" uid="uid://bbb6imkgnnpn0" path="res://swordSlash/swordSlashSets/sword_slash_set_1.tscn" id="3_senlo"]
+[ext_resource type="PackedScene" uid="uid://c7jnfijyopd3k" path="res://swordSlash/swordSlashSets/sword_slash_set_2.tscn" id="4_ihl84"]
 
 [node name="bossSprite" type="Sprite2D"]
 texture = ExtResource("1_nvalg")
+script = ExtResource("2_hjjhg")
+swordSlashSets = Array[PackedScene]([ExtResource("3_senlo"), ExtResource("4_ihl84")])
+
+[node name="attackTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]

@@ -5,13 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b6b0kxs64ccsm" path="res://bossHealthBar/bossHealthBarProgress.png" id="2_qi3e6"]
 
 [node name="bossHealthBar" type="TextureProgressBar"]
-step = 0.01
 value = 100.0
-nine_patch_stretch = true
-stretch_margin_left = 5
-stretch_margin_top = 16
-stretch_margin_right = 5
-stretch_margin_bottom = 16
 texture_over = ExtResource("1_vv8m7")
 texture_progress = ExtResource("2_qi3e6")
 texture_progress_offset = Vector2(7, 13)

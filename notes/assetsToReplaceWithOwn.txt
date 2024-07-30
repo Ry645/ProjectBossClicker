@@ -1,0 +1,5 @@
+res://swordSlash/swordSlashEffect.png
+res://bossSprite/bossPlaceholder.png
+res://healthBar/bossHealthBarProgress.png
+res://healthBar/bossHealthBarPlaceholderSet.png
+res://healthBar/bossHealthBarBorder.png

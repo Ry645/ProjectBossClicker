@@ -20,3 +20,7 @@ different bosses in different dimensions with entirely different mechanics and g
 can transfer some gear across dimensions for a progression system
 
 not supposed to complete highest tier of bosses in early game, instead complete lower tiers and go to next dimension for next boss after tier III
+
+infusion orbs cost entire mana pool to collect
+hover over for one second to collect
+5 max infusion meter

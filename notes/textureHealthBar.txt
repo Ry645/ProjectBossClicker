@@ -1,0 +1,5 @@
+don't use texture progress or nine patch
+instead use a moving texture rect with a shader to create the health bar
+
+shader makes the left side of the health bar disappear as the right side moves to the left
+the other way around for moving to the right

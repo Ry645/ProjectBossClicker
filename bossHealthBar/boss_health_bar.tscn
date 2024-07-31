@@ -1,8 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpgburtpjlamy"]
+[gd_scene load_steps=4 format=3 uid="uid://cpgburtpjlamy"]
 
 [ext_resource type="Script" path="res://bossHealthBar/boss_health_bar.gd" id="1_haw5m"]
 [ext_resource type="Texture2D" uid="uid://caahfpseahby" path="res://bossHealthBar/bossHealthBarBorder.png" id="1_vv8m7"]
+[ext_resource type="Texture2D" uid="uid://b6b0kxs64ccsm" path="res://bossHealthBar/bossHealthBarProgress.png" id="2_qi3e6"]
 
 [node name="bossHealthBar" type="TextureRect"]
 texture = ExtResource("1_vv8m7")
 script = ExtResource("1_haw5m")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = 20.0
+offset_bottom = 21.0
+texture = ExtResource("2_qi3e6")
+region_rect = Rect2(0, 0, 260, 8)
+patch_margin_left = 6
+patch_margin_right = 6

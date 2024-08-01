@@ -6,7 +6,7 @@ based purely on mouse cursor position
 need to hold down button for 3 seconds to start boss
 
 boss tiers
-    later tiers are essentially stat checks that soft-require new gear
+	later tiers are essentially stat checks that soft-require new gear
 
 player heals to full health with right click ability and uses 40 mana
 
@@ -23,4 +23,11 @@ not supposed to complete highest tier of bosses in early game, instead complete 
 
 infusion orbs cost entire mana pool to collect
 hover over for one second to collect
-5 max infusion meter
+5 max infusion counter
+
+game starts by clicking and holding on button for 3 seconds that turns a vault door to open to the boss
+tier V of final boss will rip the door open
+
+maybe have boss weakpoints that occasionally appear on the boss
+hitting these does extra damage and contributes towards infusion orb spawns
+infusion meter?

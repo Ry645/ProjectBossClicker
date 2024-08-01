@@ -28,3 +28,11 @@ func attack():
 	var rand:int = randi_range(0, swordSlashSets.size()-1)
 	var swordNode = swordSlashSets[rand].instantiate()
 	emit_signal("spawnAttack", swordNode)
+
+
+func takeDamage(damage):
+	$healthSystem.takeDamage(damage)
+
+
+func _on_boss_hitbox_send_damage(damage):
+	takeDamage(damage)

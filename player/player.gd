@@ -1,5 +1,7 @@
 extends Sprite2D
 
+#TODO add iframes
+
 class_name Player
 
 

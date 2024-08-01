@@ -1,26 +1,11 @@
 extends Node2D
 
-#TODO clean this up (ie get rid of commented out code)
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-
-#func _process(delta): #TEST will migrate to player script   ...maybe
-	#if Input.is_action_just_pressed("attack"):
-		#damage()
-	#if Input.is_action_just_pressed("useItem"):
-		#useMana()
 
 func _input(event):
 	if event is InputEventMouseMotion:
 		$player.position = event.position
-
-#func damage(): #TEST will migrate to player script somehow
-	#$bossSprite/healthSystem.takeDamage(1)
-
-#func useMana(): #TEST will migrate this to a signal in a player script
-	#$player/manaSystem.useMana(5)
 
 func _on_boss_sprite_spawn_attack(node):
 	add_child(node)

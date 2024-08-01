@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c400ejvok55y"]
+[gd_scene load_steps=7 format=3 uid="uid://c400ejvok55y"]
 
 [ext_resource type="PackedScene" uid="uid://bryv3ijojnogm" path="res://bossSprite/boss_sprite.tscn" id="1_mg7t7"]
 [ext_resource type="Script" path="res://main/main.gd" id="1_y4r1f"]
 [ext_resource type="PackedScene" uid="uid://bfwrgi6d4f41k" path="res://player/player.tscn" id="2_5tf7f"]
 [ext_resource type="PackedScene" uid="uid://cpgburtpjlamy" path="res://bossHealthBar/boss_health_bar.tscn" id="4_p5ql6"]
 [ext_resource type="PackedScene" uid="uid://cxnxqka7ky0oo" path="res://playerStatBars/playerHealthBar/player_health_bar.tscn" id="5_2do0n"]
+[ext_resource type="PackedScene" uid="uid://bw4d6ncfl76b2" path="res://playerStatBars/playerManaBar/player_mana_bar.tscn" id="6_00syo"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_y4r1f")
@@ -27,7 +28,14 @@ offset_top = 294.0
 offset_right = 1038.0
 offset_bottom = 302.0
 
+[node name="playerManaBar" parent="." instance=ExtResource("6_00syo")]
+offset_left = 782.0
+offset_top = 346.0
+offset_right = 1038.0
+offset_bottom = 354.0
+
 [connection signal="spawnAttack" from="bossSprite" to="." method="_on_boss_sprite_spawn_attack"]
 [connection signal="healthUpdate" from="player/healthSystem" to="." method="_on_health_system_health_update"]
+[connection signal="manaUpdate" from="player/manaSystem" to="." method="_on_mana_system_mana_update"]
 
 [editable path="player"]

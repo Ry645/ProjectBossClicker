@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://bw4d6ncfl76b2"]
+
+[ext_resource type="Texture2D" uid="uid://dhukwnb06xcao" path="res://playerStatBars/playerManaBar/playerManaBarBorder.png" id="1_ce2yg"]
+[ext_resource type="Script" path="res://statBarLogic/stat_bar.gd" id="2_gnb6f"]
+[ext_resource type="Shader" path="res://statBarLogic/stat_bar_progress_left.gdshader" id="3_r8kxo"]
+[ext_resource type="Texture2D" uid="uid://dkdygqog35gyd" path="res://playerStatBars/playerManaBar/playerManaBarProgress.png" id="4_dtwf8"]
+[ext_resource type="Shader" path="res://statBarLogic/stat_bar_progress_right.gdshader" id="5_kcab0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3hnqf"]
+shader = ExtResource("3_r8kxo")
+shader_parameter/valueFilled = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6bl34"]
+shader = ExtResource("5_kcab0")
+shader_parameter/valueFilled = 1.0
+
+[node name="playerManaBar" type="TextureRect"]
+texture_filter = 1
+offset_right = 256.0
+offset_bottom = 8.0
+texture = ExtResource("1_ce2yg")
+script = ExtResource("2_gnb6f")
+
+[node name="progressLeft" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_3hnqf")
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 8.0
+texture = ExtResource("4_dtwf8")
+
+[node name="progressRight" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_6bl34")
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 8.0
+texture = ExtResource("4_dtwf8")

@@ -16,10 +16,10 @@ func setMaterials():
 func _process(delta):
 	pass
 
-func valueUpdate(value): #SLOW if statements in gdshader
+func valueUpdate(value): #SLOW if statements in gdshader, change to step instead
 	leftMaterial.set_shader_parameter("valueFilled", value)
 	rightMaterial.set_shader_parameter("valueFilled", value)
 	
 	var minPos = $progressLeft.position.x - $progressLeft.size.x
 	var maxPos = $progressLeft.position.x
-	$progressRight.position.x = lerpf(minPos, maxPos, value) 
+	$progressRight.position.x = lerpf(minPos, maxPos, value)

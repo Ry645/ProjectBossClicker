@@ -14,10 +14,13 @@ signal addToMagicExtract(mana)
 @export var hasGodMode:bool = false
 
 func _ready():
-	emit_signal("manaUpdate", minMana, maxMana, mana)
+	call_deferred("setup")
 	
 	#TEST might start once boss starts and end once boss ends
 	startRegenTimer()
+
+func setup():
+	emit_signal("manaUpdate", minMana, maxMana, mana)
 
 func useMana(manaUsed) -> bool:
 	if hasGodMode:

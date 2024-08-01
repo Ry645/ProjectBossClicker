@@ -40,7 +40,7 @@ func changeMana(amount:float): #main function used for altering mana
 		mana = maxMana
 	
 	emit_signal("manaUpdate", minMana, maxMana, mana)
-	print("mana: ", mana)
+	#print("mana: ", mana)
 
 func regen():
 	changeMana(regenPerSec)

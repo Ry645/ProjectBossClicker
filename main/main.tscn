@@ -35,7 +35,9 @@ offset_right = 1038.0
 offset_bottom = 354.0
 
 [connection signal="spawnAttack" from="bossSprite" to="." method="_on_boss_sprite_spawn_attack"]
-[connection signal="healthUpdate" from="player/healthSystem" to="." method="_on_health_system_health_update"]
+[connection signal="healthUpdate" from="bossSprite/healthSystem" to="." method="bossHealthUpdate"]
+[connection signal="healthUpdate" from="player/healthSystem" to="." method="playerHealthUpdate"]
 [connection signal="manaUpdate" from="player/manaSystem" to="." method="_on_mana_system_mana_update"]
 
+[editable path="bossSprite"]
 [editable path="player"]

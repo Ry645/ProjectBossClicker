@@ -5,6 +5,6 @@ shader makes the left side of the health bar disappear as the right side moves t
 the other way around for moving to the right
 
 at very end of health bar (ie small sliver)
-make right bar disappear from left to right to prevent clipping
+make right bar disappear from left to right to prevent clipping out the other end
 
-everything controlled by proportion filled variable via game logic and health system
+everything controlled by value filled variable via game logic and health system

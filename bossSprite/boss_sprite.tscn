@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bryv3ijojnogm"]
+[gd_scene load_steps=6 format=3 uid="uid://bryv3ijojnogm"]
 
 [ext_resource type="Texture2D" uid="uid://bvy3alf67pd2n" path="res://bossSprite/bossPlaceholder.png" id="1_nvalg"]
 [ext_resource type="Script" path="res://bossSprite/boss_sprite.gd" id="2_hjjhg"]
 [ext_resource type="PackedScene" uid="uid://bbb6imkgnnpn0" path="res://swordSlash/swordSlashSets/sword_slash_set_1.tscn" id="3_senlo"]
 [ext_resource type="PackedScene" uid="uid://c7jnfijyopd3k" path="res://swordSlash/swordSlashSets/sword_slash_set_2.tscn" id="4_ihl84"]
+[ext_resource type="PackedScene" uid="uid://1l5roa5kttpy" path="res://healthSystem/health_system.tscn" id="5_rywu5"]
 
 [node name="bossSprite" type="Sprite2D"]
 texture = ExtResource("1_nvalg")
@@ -12,5 +13,9 @@ swordSlashSets = Array[PackedScene]([ExtResource("3_senlo"), ExtResource("4_ihl8
 
 [node name="attackTimer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="healthSystem" parent="." instance=ExtResource("5_rywu5")]
+maxHealth = 100.0
+health = 100.0
 
 [connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]

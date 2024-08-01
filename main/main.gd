@@ -21,3 +21,7 @@ func damage():
 
 func _on_boss_sprite_spawn_attack(node):
 	add_child(node)
+
+
+func _on_health_system_health_update(minHealth, maxHealth, currentHealth):
+	$playerHealthBar.valueUpdate(currentHealth/maxHealth)

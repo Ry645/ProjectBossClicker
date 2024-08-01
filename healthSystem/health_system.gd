@@ -12,7 +12,7 @@ signal healthUpdate(minHealth, maxHealth, currentHealth)
 @export var hasGodMode:bool = false
 
 func _ready():
-	emit_signal("healthUpdate", minHealth, maxHealth, health)
+	call_deferred("setup")
 
 func takeDamage(damage):
 	if hasGodMode:
@@ -23,3 +23,6 @@ func takeDamage(damage):
 	emit_signal("healthUpdate", minHealth, maxHealth, health)
 	if health <= minHealth:
 		emit_signal("die")
+
+func setup():
+	emit_signal("healthUpdate", minHealth, maxHealth, health)

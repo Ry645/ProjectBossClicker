@@ -13,15 +13,15 @@ func _on_boss_sprite_spawn_attack(node):
 
 # TODO migrate ALL OF THIS to a manager
 
-func playerHealthUpdate(minHealth, maxHealth, currentHealth):
+func playerHealthUpdate(_minHealth, maxHealth, currentHealth):
 	$playerHealthBar.valueUpdate(currentHealth/maxHealth)
 
 
-func _on_mana_system_mana_update(minMana, maxMana, currentMana):
+func _on_mana_system_mana_update(_minMana, maxMana, currentMana):
 	$playerManaBar.valueUpdate(currentMana/maxMana)
 
 
-func bossHealthUpdate(minHealth, maxHealth, currentHealth):
+func bossHealthUpdate(_minHealth, maxHealth, currentHealth):
 	$bossHealthBar.valueUpdate(currentHealth/maxHealth)
 
 # TODO ALL OF THIS

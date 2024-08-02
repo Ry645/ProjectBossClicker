@@ -11,7 +11,7 @@ var attackPower = 5
 #TODO will tie to holding items later
 var manaUsage = 5
 
-func _process(delta):
+func _process(_delta):
 	inputProcess()
 
 func _on_player_collision_send_damage(damage):

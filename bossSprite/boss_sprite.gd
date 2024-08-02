@@ -6,6 +6,7 @@ class_name BossSprite
 
 signal spawnAttack(node)
 
+var hasIFrames:bool = false
 var bossStage:int = 1
 
 #INFO DO NOT CHANGE NAME WITHOUT MAKING SURE NO DATA IS LOST
@@ -31,8 +32,22 @@ func attack():
 
 
 func takeDamage(damage):
-	$healthSystem.takeDamage(damage)
+	if !hasIFrames:
+		$healthSystem.takeDamage(damage)
+		setHasIFrames(true)
+		$iFrameTimer.start()
 
 
 func _on_boss_hitbox_send_damage(damage):
 	takeDamage(damage)
+
+
+func _on_i_frame_timer_timeout():
+	setHasIFrames(false)
+
+func setHasIFrames(iFrames):
+	hasIFrames = iFrames
+	if iFrames:
+		material.set_shader_parameter("tint", Color(1, 102.0/255.0, 102.0/255.0))
+	else:
+		material.set_shader_parameter("tint", Color(1, 1, 1))

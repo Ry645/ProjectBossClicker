@@ -13,7 +13,7 @@ func setMaterials():
 	rightMaterial = $progressRight.get("material")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func valueUpdate(value): #SLOW if statements in gdshader, change to step instead

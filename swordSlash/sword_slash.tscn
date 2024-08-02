@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://swordSlash/sword_slash.gd" id="1_rbgly"]
 [ext_resource type="Shape2D" uid="uid://diwjtfgvykugl" path="res://swordSlash/swordSlashCollision.tres" id="3_5v0jm"]
 
-[node name="swordSlash" type="Sprite2D"]
+[node name="swordSlash" type="Sprite2D" groups=["hitGroup1"]]
 script = ExtResource("1_rbgly")
 
 [node name="hitBox" parent="." instance=ExtResource("1_dav8b")]

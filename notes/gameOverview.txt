@@ -12,9 +12,7 @@ player heals to full health with right click ability and uses 40 mana
 
 
 materials gained from defeating boss
-better materials from having more magic extract
-excess mana regened goes towards magic extract
-magic extract deactivated on first boss attempt for its tier
+better materials from having more infusion meter
 
 different bosses in different dimensions with entirely different mechanics and gear
 can transfer some gear across dimensions for a progression system
@@ -23,11 +21,16 @@ not supposed to complete highest tier of bosses in early game, instead complete 
 
 infusion orbs cost entire mana pool to collect
 hover over for one second to collect
-5 max infusion counter
+5 max infusion meter
+infusion orbs only appear when fighting tier v and above
+
+tier v boss has attack that will kill player without special upgrade and progress to next dimension automatically
+player unlocks ability to dimension hop and transfer items when attempting to kill tier v of final boss
+coincidentally infustion orbs can appear then
+
 
 game starts by clicking and holding on button for 3 seconds that turns a vault door to open to the boss
 tier V of final boss will rip the door open
 
 maybe have boss weakpoints that occasionally appear on the boss
 hitting these does extra damage and contributes towards infusion orb spawns
-infusion meter?

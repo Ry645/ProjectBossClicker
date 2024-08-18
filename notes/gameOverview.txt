@@ -34,3 +34,6 @@ tier V of final boss will rip the door open
 
 maybe have boss weakpoints that occasionally appear on the boss
 hitting these does extra damage and contributes towards infusion orb spawns
+
+boss collision could be huge circle that is shown so animations don't mess up clicking
+weakpoints give skill expression

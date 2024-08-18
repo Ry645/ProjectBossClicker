@@ -1,6 +1,7 @@
 extends Sprite2D
 
 #TODO add iframes
+#should i?
 
 class_name Player
 
@@ -19,10 +20,11 @@ func _on_player_collision_send_damage(damage):
 
 func inputProcess():
 	if Input.is_action_just_pressed("attack"):
-		for hitBox in ($playerCollision as Area2D).get_overlapping_areas():
-			hitBox.takeDamage(attackPower)
+		for collision in ($playerCollision as Area2D).get_overlapping_areas():
+			if collision.has_method("takeDamage"):
+				collision.takeDamage(attackPower)
 	if Input.is_action_just_pressed("useItem"):
-		useMana()
+		useMana() # TODO change to useItem()
 
-func useMana(): #TEST will migrate this to a signal in a player script
+func useMana():
 	$manaSystem.useMana(manaUsage)

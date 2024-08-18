@@ -1,0 +1,5 @@
+inspired by mario and luigi dream team art
+
+go high res during creation but then reduce resolution of animation by a factor of 2
+
+use nearest texture filter option for greater effect

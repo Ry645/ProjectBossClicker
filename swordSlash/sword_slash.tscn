@@ -12,13 +12,17 @@ script = ExtResource("1_rbgly")
 
 [node name="CollisionShape2D" parent="hitBox" index="0"]
 shape = ExtResource("3_5v0jm")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="texture" type="Sprite2D" parent="."]
 position = Vector2(0, -20.69)
 rotation = 0.366519
 texture = ExtResource("1_eci64")
 
-[connection signal="timeout" from="hitBox/durationTimer" to="." method="_on_duration_timer_timeout"]
+[node name="existTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="existTimer" to="." method="_on_exist_timer_timeout"]
 
 [editable path="hitBox"]

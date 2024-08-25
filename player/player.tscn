@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dyctee8luukxh" path="res://manaSystem/mana_system.tscn" id="3_wnsfv"]
 [ext_resource type="Script" path="res://player/playerCollision.gd" id="5_lvosi"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r6fg"]
-size = Vector2(0, 0)
+[sub_resource type="CircleShape2D" id="CircleShape2D_wocts"]
+radius = 5.0
 
 [node name="player" type="Sprite2D"]
 scale = Vector2(0.5, 0.5)
@@ -22,6 +22,6 @@ script = ExtResource("1_54656")
 script = ExtResource("5_lvosi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerCollision"]
-shape = SubResource("RectangleShape2D_2r6fg")
+shape = SubResource("CircleShape2D_wocts")
 
 [connection signal="sendDamage" from="playerCollision" to="." method="_on_player_collision_send_damage"]

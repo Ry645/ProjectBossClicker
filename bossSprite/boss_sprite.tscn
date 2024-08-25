@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bryv3ijojnogm"]
+[gd_scene load_steps=12 format=3 uid="uid://bryv3ijojnogm"]
 
 [ext_resource type="Shader" path="res://bossSprite/boss_sprite.gdshader" id="1_nd2wc"]
 [ext_resource type="Texture2D" uid="uid://bvy3alf67pd2n" path="res://bossSprite/bossPlaceholder.png" id="1_nvalg"]
 [ext_resource type="Script" path="res://bossSprite/boss_sprite.gd" id="2_hjjhg"]
-[ext_resource type="PackedScene" uid="uid://bbb6imkgnnpn0" path="res://swordSlash/swordSlashSets/sword_slash_set_1.tscn" id="3_senlo"]
-[ext_resource type="PackedScene" uid="uid://c7jnfijyopd3k" path="res://swordSlash/swordSlashSets/sword_slash_set_2.tscn" id="4_ihl84"]
+[ext_resource type="PackedScene" uid="uid://bbb6imkgnnpn0" path="res://swordSlash/swordSlashSets/long_sword_slash_set_1.tscn" id="3_senlo"]
+[ext_resource type="PackedScene" uid="uid://c7jnfijyopd3k" path="res://swordSlash/swordSlashSets/long_sword_slash_set_2.tscn" id="4_ihl84"]
 [ext_resource type="PackedScene" uid="uid://1l5roa5kttpy" path="res://healthSystem/health_system.tscn" id="5_rywu5"]
+[ext_resource type="PackedScene" uid="uid://kghhue4spcbf" path="res://swordSlash/swordSlashSets/short_sword_slash_horizontal.tscn" id="6_qj5ib"]
 [ext_resource type="Script" path="res://bossSprite/bossHitbox.gd" id="6_vhexf"]
+[ext_resource type="PackedScene" uid="uid://dbks1wdf3m20n" path="res://swordSlash/swordSlashSets/short_sword_slash_vertical.tscn" id="7_eu0qk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3lxco"]
 shader = ExtResource("1_nd2wc")
@@ -19,10 +21,10 @@ radius = 600.0
 material = SubResource("ShaderMaterial_3lxco")
 texture = ExtResource("1_nvalg")
 script = ExtResource("2_hjjhg")
-swordSlashSets = Array[PackedScene]([ExtResource("3_senlo"), ExtResource("4_ihl84")])
+longAttackSets = Array[PackedScene]([ExtResource("3_senlo"), ExtResource("4_ihl84")])
+shortAttackSets = Array[PackedScene]([ExtResource("6_qj5ib"), ExtResource("7_eu0qk")])
 
-[node name="attackTimer" type="Timer" parent="."]
-wait_time = 3.0
+[node name="shortAttackTimer" type="Timer" parent="."]
 
 [node name="healthSystem" parent="." instance=ExtResource("5_rywu5")]
 maxHealth = 100.0
@@ -38,7 +40,6 @@ shape = SubResource("CircleShape2D_dkuk4")
 wait_time = 0.35
 one_shot = true
 
-[connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]
-[connection signal="input_event" from="bossHitbox" to="." method="_on_boss_hitbox_input_event"]
+[connection signal="timeout" from="shortAttackTimer" to="." method="_on_short_attack_timer_timeout"]
 [connection signal="sendDamage" from="bossHitbox" to="." method="_on_boss_hitbox_send_damage"]
 [connection signal="timeout" from="iFrameTimer" to="." method="_on_i_frame_timer_timeout"]

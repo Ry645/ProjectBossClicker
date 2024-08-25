@@ -2,13 +2,15 @@ extends Node2D
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	$bossSprite.playerNode = $player
 
 func _input(event):
 	if event is InputEventMouseMotion:
 		$player.position = event.position
 
-func _on_boss_sprite_spawn_attack(node):
+func _on_boss_sprite_spawn_attack(node, spawnOffset):
 	add_child(node)
+	node.position += spawnOffset
 
 
 # TODO migrate ALL OF THIS to a manager

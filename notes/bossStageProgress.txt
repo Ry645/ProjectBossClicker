@@ -1,0 +1,4 @@
+boss stage progression:
+    based on health
+    based on a buncha timers that trigger attacks
+    does a different attack for each boss stage sometimes

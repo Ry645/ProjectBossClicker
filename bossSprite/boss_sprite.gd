@@ -4,32 +4,48 @@ extends Sprite2D
 
 class_name BossSprite
 
-signal spawnAttack(node)
+signal spawnAttack(node, spawnOffset)
 
 var hasIFrames:bool = false
 var bossStage:int = 1
 
+var playerNode
+
 #INFO DO NOT CHANGE NAME WITHOUT MAKING SURE NO DATA IS LOST
-@export var swordSlashSets:Array[PackedScene]
+@export var longAttackSets:Array[PackedScene]
+@export var shortAttackSets:Array[PackedScene]
 
 #TEST will later have something else trigger this event
 func _ready():
 	startBoss()
 
 func startBoss():
-	$attackTimer.start()
+	$shortAttackTimer.start()
 
 
-func _on_attack_timer_timeout():
-	attack()
+func _on_short_attack_timer_timeout():
+	shortAttack()
 
-func attack():
+func longAttack():
 	#TODO match bossStage:
-	
-	var rand:int = randi_range(0, swordSlashSets.size()-1)
-	var swordNode = swordSlashSets[rand].instantiate()
-	emit_signal("spawnAttack", swordNode)
+	match bossStage:
+		1:
+			var rand:int = randi_range(0, longAttackSets.size()-1)
+			var swordNode = longAttackSets[rand].instantiate()
+			var spawnOffset:Vector2 = Vector2.ZERO
+			emit_signal("spawnAttack", swordNode, spawnOffset)
 
+func shortAttack():
+	match bossStage:
+		1:
+			var rand:int = randi_range(0, shortAttackSets.size()-1)
+			var swordNode = shortAttackSets[rand].instantiate()
+			var spawnOffset:Vector2 = playerNode.position
+			emit_signal("spawnAttack", swordNode, spawnOffset)
+
+func nextPhase():
+	#match bossStage:
+	pass
 
 func takeDamage(damage):
 	if !hasIFrames:

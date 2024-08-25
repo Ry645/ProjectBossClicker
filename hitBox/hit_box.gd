@@ -15,9 +15,13 @@ func _ready():
 	add_to_group(hitBoxProperties.hitGroup)
 	timer.start(hitBoxProperties.duration)
 
+func deactivate():
+	$CollisionShape2D.disabled = true
+
 #INFO
 #for anything for detecting collision or anything else
 #in the game world, use _physics_process instead of _process
+#EXPENSIVE
 func _on_area_entered(area:Area2D):
 	if !area.is_in_group(hitBoxProperties.hitGroup):
 		if area.has_method("takeDamage"):

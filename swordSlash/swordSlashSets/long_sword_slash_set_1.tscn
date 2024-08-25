@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbb6imkgnnpn0"]
+
+[ext_resource type="PackedScene" uid="uid://ri0f4m452phk" path="res://attackWarning/attack_warning.tscn" id="1_73hpa"]
+[ext_resource type="PackedScene" uid="uid://dpetu3bedhbhk" path="res://swordSlash/sword_slash.tscn" id="2_6k3ee"]
+[ext_resource type="Script" path="res://deleteOnRuntime/deleteOnRuntime.gd" id="3_86ml1"]
+
+[node name="swordSlashSet1" type="Node2D"]
+
+[node name="attackWarning" parent="." instance=ExtResource("1_73hpa")]
+position = Vector2(121, 320)
+rotation = -1.5708
+attackToSpawn = ExtResource("2_6k3ee")
+
+[node name="swordSlash" parent="attackWarning" instance=ExtResource("2_6k3ee")]
+visible = false
+script = ExtResource("3_86ml1")
+
+[node name="attackWarning2" parent="." instance=ExtResource("1_73hpa")]
+position = Vector2(556, 316)
+rotation = -1.5708
+attackToSpawn = ExtResource("2_6k3ee")
+
+[node name="swordSlash2" parent="attackWarning2" instance=ExtResource("2_6k3ee")]
+visible = false
+script = ExtResource("3_86ml1")
+
+[node name="attackWarning3" parent="." instance=ExtResource("1_73hpa")]
+position = Vector2(981, 320)
+rotation = -1.5708
+attackToSpawn = ExtResource("2_6k3ee")
+
+[node name="swordSlash3" parent="attackWarning3" instance=ExtResource("2_6k3ee")]
+visible = false
+script = ExtResource("3_86ml1")

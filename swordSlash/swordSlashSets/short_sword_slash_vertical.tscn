@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbks1wdf3m20n"]
+
+[ext_resource type="PackedScene" uid="uid://ri0f4m452phk" path="res://attackWarning/attack_warning.tscn" id="1_hvdj2"]
+[ext_resource type="PackedScene" uid="uid://dpetu3bedhbhk" path="res://swordSlash/sword_slash.tscn" id="2_ietcb"]
+
+[node name="shortSwordSlashHorizontal" type="Node2D"]
+
+[node name="attackWarning" parent="." instance=ExtResource("1_hvdj2")]
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+attackToSpawn = ExtResource("2_ietcb")

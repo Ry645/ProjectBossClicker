@@ -5,5 +5,5 @@ static var propertyList:Array[String] = ["damageValue", "duration", "hurtBoxType
 #property order: ["damageValue", "duration", "hurtBoxType", "hitGroup", "statusEffect"]
 #@export_enum("oneShot", "lingering")
 static var dictType = {
-	"swordSlash" = [5, 0.5, 0, "hitGroup1", ""]
+	"swordSlash" = [5, 0.2, 0, "hitGroup1", ""]
 }

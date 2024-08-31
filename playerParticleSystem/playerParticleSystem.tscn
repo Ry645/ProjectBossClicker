@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://pbyn5snwwcth"]
+
+[ext_resource type="Material" uid="uid://jrh6wn5lughu" path="res://playerParticleSystem/playerParticleShader.tres" id="1_abskh"]
+[ext_resource type="Script" path="res://playerParticleSystem/playerParticleSystem.gd" id="2_wen6a"]
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+emitting = false
+process_material = ExtResource("1_abskh")
+lifetime = 0.15
+one_shot = true
+explosiveness = 1.0
+script = ExtResource("2_wen6a")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

@@ -24,8 +24,9 @@ func _ready():
 func startBoss():
 	$shortAttackTimer.start()
 
-
+#TEMP
 func _on_short_attack_timer_timeout():
+	longAttack()
 	shortAttack()
 
 func longAttack():

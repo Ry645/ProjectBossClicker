@@ -16,7 +16,7 @@ signal addToMagicExtract(mana)
 func _ready():
 	call_deferred("setup")
 	
-	#TEST might start once boss starts and end once boss ends
+	#TEMP might start once boss starts and end once boss ends
 	startRegenTimer()
 
 func setup():

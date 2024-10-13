@@ -15,7 +15,9 @@ var playerNode
 @export var longAttackSets:Array[PackedScene]
 @export var shortAttackSets:Array[PackedScene]
 
-#TEST will later have something else trigger this event
+@export var bossDeathParticleScene:PackedScene
+
+#TEMP will later have something else trigger this event
 func _ready():
 	startBoss()
 
@@ -67,3 +69,12 @@ func setHasIFrames(iFrames):
 		material.set_shader_parameter("tint", Color(1, 102.0/255.0, 102.0/255.0))
 	else:
 		material.set_shader_parameter("tint", Color(1, 1, 1))
+
+#TEMP will make a better show
+func destroy():
+	var bossDeathParticles = bossDeathParticleScene.instantiate()
+	bossDeathParticles.position = global_position;
+	get_parent().add_child(bossDeathParticles);
+	bossDeathParticles.emitting = true;
+	queue_free()
+	

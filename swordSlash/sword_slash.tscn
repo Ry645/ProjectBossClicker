@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dpetu3bedhbhk"]
 
 [ext_resource type="PackedScene" uid="uid://ckh83ptu731mq" path="res://hitBox/hit_box.tscn" id="1_dav8b"]
-[ext_resource type="Texture2D" uid="uid://bj3si2whuc3kj" path="res://swordSlash/swordSlashEffect.png" id="1_eci64"]
+[ext_resource type="Texture2D" uid="uid://oicwo4rcr0a3" path="res://swordSlash/swordSlashEffect.png" id="1_eci64"]
 [ext_resource type="Script" path="res://swordSlash/sword_slash.gd" id="1_rbgly"]
 [ext_resource type="Shape2D" uid="uid://diwjtfgvykugl" path="res://swordSlash/swordSlashCollision.tres" id="3_5v0jm"]
 
@@ -14,8 +14,8 @@ script = ExtResource("1_rbgly")
 shape = ExtResource("3_5v0jm")
 
 [node name="texture" type="Sprite2D" parent="."]
-position = Vector2(0, -20.69)
-rotation = 0.366519
+position = Vector2(0, 8)
+scale = Vector2(0.92, 1.195)
 texture = ExtResource("1_eci64")
 
 [node name="existTimer" type="Timer" parent="."]

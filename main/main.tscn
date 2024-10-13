@@ -20,10 +20,10 @@ z_index = 2
 
 [node name="bossHealthBar" parent="." instance=ExtResource("4_p5ql6")]
 z_index = 1
-offset_left = 424.0
+offset_left = 314.0
 offset_top = 18.0
-offset_right = 700.0
-offset_bottom = 50.0
+offset_right = 826.0
+offset_bottom = 34.0
 
 [node name="playerHealthBar" parent="." instance=ExtResource("5_2do0n")]
 offset_left = 782.0
